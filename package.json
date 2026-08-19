@@ -9,7 +9,7 @@
     "server": "node server/index.js",
     "seed": "node server/db/seed.js",
     "client:dev": "vite client",
-    "client:build": "vite build client",
+    "client:build": "vite build",
     "dev": "node server/index.js"
   },
   "dependencies": {
