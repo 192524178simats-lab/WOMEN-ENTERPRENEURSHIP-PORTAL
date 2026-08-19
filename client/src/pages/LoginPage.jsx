@@ -46,7 +46,7 @@ export const LoginPage = () => {
         setError(data.error || 'Login failed. Please check credentials.');
       }
     } catch (err) {
-      setError('Network error. Failed to connect to server.');
+      setError('Network error: Unable to connect to backend server. Please ensure the Express server is running on http://localhost:5000 (run `npm start`).');
     } finally {
       setLoading(false);
     }

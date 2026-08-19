@@ -20,9 +20,9 @@ router.get('/', async (req, res) => {
     }
 
     if (search) {
-      sql += ` AND (s.name LIKE ? OR s.scheme_code LIKE ? OR s.department LIKE ? OR s.description LIKE ?)`;
+      sql += ` AND (s.name LIKE ? OR s.scheme_code LIKE ? OR s.department LIKE ? OR s.description LIKE ? OR s.eligibility LIKE ? OR s.benefits LIKE ? OR s.target_sector LIKE ? OR s.target_category LIKE ?)`;
       const term = `%${search}%`;
-      params.push(term, term, term, term);
+      params.push(term, term, term, term, term, term, term, term);
     }
 
     if (sector && sector !== 'All') {
